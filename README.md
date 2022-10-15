@@ -16,5 +16,8 @@
 ### Запуск проекта
 
 ```bash
-git clone https://github.com/VannaKarenina/welbex_task && cd welbex_task && npm i && npm run serve
+git clone https://github.com/VannaKarenina/welbex_task
+cd welbex_task
+npm i
+npm run serve
 ```
