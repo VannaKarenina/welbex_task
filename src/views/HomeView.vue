@@ -13,9 +13,9 @@
       <div class="col-4">
         <label for="conditionSelection" class="form-label">Условие</label>
         <select class="form-select" v-model="selectedCondition" id="conditionSelection" aria-label="Default select example">
-          <option value="=">=</option>
-          <option value=">">></option>
-          <option value="<"><</option>
+          <option value="=" v-if="selectedCol != 'Name'">=</option>
+          <option value=">" v-if="selectedCol != 'Name'">></option>
+          <option value="<" v-if="selectedCol != 'Name'"><</option>
           <option value="contain">Contain</option>
         </select>
       </div>
