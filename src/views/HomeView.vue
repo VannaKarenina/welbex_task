@@ -13,7 +13,7 @@
       <div class="col-4">
         <label for="conditionSelection" class="form-label">Условие</label>
         <select class="form-select" v-model="selectedCondition" id="conditionSelection" aria-label="Default select example">
-          <option value="=" v-if="selectedCol != 'Name'">=</option>
+          <option value="=">=</option>
           <option value=">" v-if="selectedCol != 'Name'">></option>
           <option value="<" v-if="selectedCol != 'Name'"><</option>
           <option value="contain">Contain</option>
@@ -114,7 +114,8 @@ export default {
           })
         }
       }
-      this.tableData = subLayer[this.selectedCondition](this.selectedCol.toLowerCase(), this.filterVal)
+      const returnedFilterData = subLayer[this.selectedCondition](this.selectedCol.toLowerCase(), this.filterVal);
+      this.tableData = returnedFilterData == 0 ? this.tableData = tableDataAsset : this.tableData = returnedFilterData;
     },
   }
 }

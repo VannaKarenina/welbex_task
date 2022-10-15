@@ -1,19 +1,20 @@
-# task
+# welbex-task
 
-## Project setup
-```
-npm install
-```
+## Функционал
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+>- Сортировка данных в таблице по каждой колнке в порядке убывания и возрастания (работает по нажатию на заголовок колонки)
+>- Фильтрация по таблице выполняется выбором колонки и условия фильтрации (для некоторых колонок отключена фильтрация по <> name)
+>- Пагинация, расположенная в нижней части таблицы
+>- Тестовые данные, экспортирующиеся автоматически из файла "data" в @/assets/data.js
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Использованный инструментарий
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+>- vue-cli
+>- bootstrap - только css стили
+>- vue-router
+
+### Запуск проекта
+
+```bash
+git clone https://github.com/VannaKarenina/welbex_task && cd welbex_task && npm i && npm run serve
+```
